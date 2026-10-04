@@ -1,0 +1,19 @@
+name: Course capstone checks
+on:
+  pull_request:
+    branches: [lesson40-integration]
+  push:
+    branches: [lesson40-integration, lesson40-recovery]
+permissions:
+  contents: read
+jobs:
+  capstone-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Check capstone contract
+        run: python3 -m unittest -v
+        working-directory: lesson40
