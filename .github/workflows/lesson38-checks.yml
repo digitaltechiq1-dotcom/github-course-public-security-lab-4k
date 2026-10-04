@@ -1,0 +1,16 @@
+name: Course required checks
+on:
+  pull_request:
+    branches: [lesson38-protected]
+permissions:
+  contents: read
+jobs:
+  course-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - run: python3 -m unittest -v
+        working-directory: lesson38
