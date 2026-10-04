@@ -3,4 +3,4 @@ def progress(done, total):
         raise TypeError("integer inputs required")
     if total <= 0 or not 0 <= done <= total:
         raise ValueError("invalid progress range")
-    return int(done / total * 100)
+    return round(done / total * 100)
