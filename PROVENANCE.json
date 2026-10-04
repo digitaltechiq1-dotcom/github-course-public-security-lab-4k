@@ -1,0 +1,8 @@
+{
+  "fixture_source": "https://raw.githubusercontent.com/skills/introduction-to-secret-scanning/77045e069f9deda2beba27990d65899c4ee4b221/.github/steps/3-enable-push-protection.md",
+  "revision": "77045e069f9deda2beba27990d65899c4ee4b221",
+  "source_sha256": "99e029a70914a35888070f00eb708d93ad166146c060d4d2935ede28e1e59a10",
+  "license": "third-party/GITHUB-SKILLS-LICENSE",
+  "fixture_status": "Source explicitly describes it as inactive; marker retained",
+  "codeql_reference": "https://codeql.github.com/codeql-query-help/python/py-sql-injection/"
+}
