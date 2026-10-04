@@ -4,3 +4,6 @@ def progress(done, total):
     if total <= 0 or not 0 <= done <= total:
         raise ValueError("invalid progress range")
     return round(done / total * 100)
+
+def summary(done, total):
+    return f"{done}/{total} complete ({progress(done, total)}%)"
