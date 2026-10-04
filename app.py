@@ -13,7 +13,7 @@ def lessons():
         db.executemany("INSERT INTO lessons VALUES (?, ?)", [
             ("First commit", "Git"), ("First workflow", "Actions"),
         ])
-        rows = db.execute("SELECT title FROM lessons WHERE topic = '" + topic + "'").fetchall()
+        rows = db.execute("SELECT title FROM lessons WHERE topic = ?", (topic,)).fetchall()
         return jsonify([row[0] for row in rows])
     finally:
         db.close()
