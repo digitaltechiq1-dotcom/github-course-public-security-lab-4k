@@ -3,6 +3,7 @@ from progress import progress
 
 class ProgressTests(unittest.TestCase):
     def test_quarter(self): self.assertEqual(progress(1,4),25)
+    def test_rounding(self): self.assertEqual(progress(2,3),67)
     def test_empty(self): self.assertEqual(progress(0,5),0)
     def test_complete(self): self.assertEqual(progress(5,5),100)
     def test_bool(self):
